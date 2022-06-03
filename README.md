@@ -39,8 +39,9 @@ Visit the running application at http://127.0.0.1:8000/api on POSTMAN to get sta
 
 #### Testing
 ```
-python manage.py test
+Wiki link for endpoints and screenshots with responses.
 ```
+https://github.com/rohit-v/book_store/wiki/List-of-endpoints-and-working
 
 #### Third-Party Documentation
 - https://docs.djangoproject.com/en/3.0/
