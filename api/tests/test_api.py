@@ -64,7 +64,7 @@ class CustomUserTests(TestCase):
             'author_pseudonym': 'mock user'
         }
         self.request.POST = test_data
-        response = self.client.post(reverse('api:api.users'), test_data)
+        response = self.client.post(reverse('api:api.users'), data=test_data, content_type='application/json')
         self.assertEqual(response.status_code, 201)
 
     def test_put(self):
@@ -78,7 +78,7 @@ class CustomUserTests(TestCase):
             'password': 'password',
             'author_pseudonym': 'mock user'
         }
-        post_response = self.client.post(reverse('api:api.users'), test_data)
+        post_response = self.client.post(reverse('api:api.users'), data=test_data, content_type='application/json')
         user_data = json.loads(post_response.content.decode('utf-8'))
         response = self.client.put(
             reverse('api:api.users.update', kwargs={'user_id': user_data['id']}),
@@ -97,7 +97,7 @@ class CustomUserTests(TestCase):
             'password': 'password',
             'author_pseudonym': 'mock user'
         }
-        post_response = self.client.post(reverse('api:api.users'), test_data)
+        post_response = self.client.post(reverse('api:api.users'), data=test_data, content_type='application/json')
         user_data = json.loads(post_response.content.decode('utf-8'))
         response = self.client.delete(
             reverse('api:api.users.update', kwargs={'user_id': user_data['id']}),
