@@ -9,7 +9,7 @@ Tasks
 • Implement assignment using: 
 - Language: Your choice 
 - Framework: Your choice Implement a REST API returning JSON or XML based on the Content-Type 
-header (**Response would be based on Accept Header while Request Type defines the request**)
+header (**Response would be based on Accept Header while Content-Type defines the request**. Going by Accept header based on the 'return' term.)
 - Implement a custom user model with a "author pseudonym" field 
 Implement a book model. Each book should have a title, description, author (your custom user model), cover image and price 
   - Choose the data type for each field that makes the most sense 
